@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A3B37961B4C00E800EE9333"
+               BlueprintIdentifier = "0A3B37CC1B4C085E00EE9333"
                BuildableName = "C#.app"
                BlueprintName = "C#"
                ReferencedContainer = "container:C#.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A3B37AB1B4C00E800EE9333"
+               BlueprintIdentifier = "0A3B37E41B4C085E00EE9333"
                BuildableName = "C#Tests.xctest"
                BlueprintName = "C#Tests"
                ReferencedContainer = "container:C#.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A3B37AB1B4C00E800EE9333"
+               BlueprintIdentifier = "0A3B37E41B4C085E00EE9333"
                BuildableName = "C#Tests.xctest"
                BlueprintName = "C#Tests"
                ReferencedContainer = "container:C#.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A3B37961B4C00E800EE9333"
+            BlueprintIdentifier = "0A3B37CC1B4C085E00EE9333"
             BuildableName = "C#.app"
             BlueprintName = "C#"
             ReferencedContainer = "container:C#.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A3B37961B4C00E800EE9333"
+            BlueprintIdentifier = "0A3B37CC1B4C085E00EE9333"
             BuildableName = "C#.app"
             BlueprintName = "C#"
             ReferencedContainer = "container:C#.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A3B37961B4C00E800EE9333"
+            BlueprintIdentifier = "0A3B37CC1B4C085E00EE9333"
             BuildableName = "C#.app"
             BlueprintName = "C#"
             ReferencedContainer = "container:C#.xcodeproj">
