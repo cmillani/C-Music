@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Entity" syncable="YES"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Nota" representedClassName="PRODUCT_MODULE_NAME.Nota" syncable="YES">
+        <attribute name="simbolo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="som" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tempo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Partitura" representedClassName="PRODUCT_MODULE_NAME.Partitura" syncable="YES">
+        <attribute name="autor" attributeType="String" syncable="YES"/>
+        <attribute name="nome" attributeType="String" syncable="YES"/>
+        <attribute name="qtdCompassos" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ritmo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tempos" attributeType="Binary" syncable="YES"/>
+        <relationship name="notas" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Nota" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Partitura" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Nota" positionX="-63" positionY="27" width="128" height="90"/>
     </elements>
 </model>

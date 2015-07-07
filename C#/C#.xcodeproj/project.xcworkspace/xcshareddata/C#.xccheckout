@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1F52FAC3-0171-41EE-A395-0FB7AD484678</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>C#</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F97D82DE702BAF83327083955F5347745E7C2F87</key>
 		<string>https://github.com/cmillani/C-Music.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>C#/C#.xcodeproj/project.xcworkspace</string>
+	<string>C#/C#.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F97D82DE702BAF83327083955F5347745E7C2F87</key>

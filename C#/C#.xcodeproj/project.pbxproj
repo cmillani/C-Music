@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0732316E1B4C220B00790459 /* Partitura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732316D1B4C220B00790459 /* Partitura.swift */; };
+		073231701B4C220B00790459 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732316F1B4C220B00790459 /* Nota.swift */; };
 		0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */; };
 		0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D41B4C085E00EE9333 /* C_.xcdatamodeld */; };
 		0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D71B4C085E00EE9333 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0732316D1B4C220B00790459 /* Partitura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Partitura.swift; path = "C#/Partitura.swift"; sourceTree = "<group>"; };
+		0732316F1B4C220B00790459 /* Nota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nota.swift; path = "C#/Nota.swift"; sourceTree = "<group>"; };
 		0A3B37CD1B4C085E00EE9333 /* C#.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C#.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B37D11B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +64,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0732316A1B4C1CF700790459 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		0732316B1B4C1D0600790459 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		0732316C1B4C1D0B00790459 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				0732316F1B4C220B00790459 /* Nota.swift */,
+				0732316D1B4C220B00790459 /* Partitura.swift */,
+			);
+			name = VO;
+			sourceTree = "<group>";
+		};
 		0A3B37C41B4C085E00EE9333 = {
 			isa = PBXGroup;
 			children = (
-				0A3B37F51B4C089000EE9333 /* Persistence */,
 				0A3B37CF1B4C085E00EE9333 /* C# */,
 				0A3B37E81B4C085E00EE9333 /* C#Tests */,
 				0A3B37CE1B4C085E00EE9333 /* Products */,
@@ -82,6 +108,8 @@
 		0A3B37CF1B4C085E00EE9333 /* C# */ = {
 			isa = PBXGroup;
 			children = (
+				0732316A1B4C1CF700790459 /* Services */,
+				0A3B37F51B4C089000EE9333 /* Persistence */,
 				0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */,
 				0A3B37D71B4C085E00EE9333 /* ViewController.swift */,
 				0A3B37D91B4C085E00EE9333 /* Main.storyboard */,
@@ -121,9 +149,12 @@
 		0A3B37F51B4C089000EE9333 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				0732316C1B4C1D0B00790459 /* VO */,
+				0732316B1B4C1D0600790459 /* DAO */,
 				0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */,
 			);
 			name = Persistence;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +260,9 @@
 				0A3B37F71B4C08CC00EE9333 /* DatabaseManager.swift in Sources */,
 				0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
+				0732316E1B4C220B00790459 /* Partitura.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
+				073231701B4C220B00790459 /* Nota.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +460,7 @@
 				0A3B37F11B4C085E00EE9333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A3B37F21B4C085E00EE9333 /* Build configuration list for PBXNativeTarget "C#Tests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +469,7 @@
 				0A3B37F41B4C085E00EE9333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
