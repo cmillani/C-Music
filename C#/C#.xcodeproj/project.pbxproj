@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0728385C1B4D62570012DFD3 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728385B1B4D62570012DFD3 /* LoadViewController.swift */; };
+		0728385E1B4D626B0012DFD3 /* LoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728385D1B4D626B0012DFD3 /* LoadCell.swift */; };
 		0732316E1B4C220B00790459 /* Partitura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732316D1B4C220B00790459 /* Partitura.swift */; };
 		073231701B4C220B00790459 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732316F1B4C220B00790459 /* Nota.swift */; };
 		0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0728385B1B4D62570012DFD3 /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		0728385D1B4D626B0012DFD3 /* LoadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadCell.swift; sourceTree = "<group>"; };
 		0732316D1B4C220B00790459 /* Partitura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Partitura.swift; path = "C#/Partitura.swift"; sourceTree = "<group>"; };
 		0732316F1B4C220B00790459 /* Nota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nota.swift; path = "C#/Nota.swift"; sourceTree = "<group>"; };
 		0A3B37CD1B4C085E00EE9333 /* C#.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C#.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0728385A1B4D62380012DFD3 /* LoadScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0728385B1B4D62570012DFD3 /* LoadViewController.swift */,
+				0728385D1B4D626B0012DFD3 /* LoadCell.swift */,
+			);
+			name = LoadScreen;
+			sourceTree = "<group>";
+		};
 		0732316A1B4C1CF700790459 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 				0732316A1B4C1CF700790459 /* Services */,
 				0A3B37F51B4C089000EE9333 /* Persistence */,
 				0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */,
+				0728385A1B4D62380012DFD3 /* LoadScreen */,
 				0A3B37D71B4C085E00EE9333 /* ViewController.swift */,
 				0A3B37D91B4C085E00EE9333 /* Main.storyboard */,
 				0A3B37DC1B4C085E00EE9333 /* Images.xcassets */,
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3B37F71B4C08CC00EE9333 /* DatabaseManager.swift in Sources */,
+				0728385E1B4D626B0012DFD3 /* LoadCell.swift in Sources */,
 				0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */,
+				0728385C1B4D62570012DFD3 /* LoadViewController.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
 				0732316E1B4C220B00790459 /* Partitura.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
