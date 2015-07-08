@@ -4,6 +4,7 @@
         <attribute name="simbolo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="som" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tempo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="partitura" maxCount="1" deletionRule="Nullify" destinationEntity="Partitura" inverseName="notas" inverseEntity="Partitura" syncable="YES"/>
     </entity>
     <entity name="Partitura" representedClassName="PRODUCT_MODULE_NAME.Partitura" syncable="YES">
         <attribute name="autor" attributeType="String" syncable="YES"/>
@@ -12,10 +13,10 @@
         <attribute name="qtdCompassos" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="ritmo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tempos" attributeType="Binary" syncable="YES"/>
-        <relationship name="notas" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Nota" syncable="YES"/>
+        <relationship name="notas" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Nota" inverseName="partitura" inverseEntity="Nota" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Nota" positionX="-63" positionY="27" width="128" height="90"/>
+        <element name="Nota" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Partitura" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

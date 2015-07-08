@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073231701B4C220B00790459 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732316F1B4C220B00790459 /* Nota.swift */; };
 		0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */; };
 		0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D41B4C085E00EE9333 /* C_.xcdatamodeld */; };
 		0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37D71B4C085E00EE9333 /* ViewController.swift */; };
@@ -15,8 +14,13 @@
 		0A3B37DD1B4C085E00EE9333 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DC1B4C085E00EE9333 /* Images.xcassets */; };
 		0A3B37E01B4C085E00EE9333 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DE1B4C085E00EE9333 /* LaunchScreen.xib */; };
 		0A3B37EC1B4C085E00EE9333 /* C_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */; };
-		0A3B37F71B4C08CC00EE9333 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */; };
-		6FA7139B1B4D5EC900B86F71 /* Partitura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139A1B4D5EC900B86F71 /* Partitura.swift */; };
+		6FA7139D1B4D612500B86F71 /* PartituraDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */; };
+		6FA7139F1B4D652800B86F71 /* NotaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139E1B4D652800B86F71 /* NotaDAO.swift */; };
+		6FA713A11B4D65A000B86F71 /* NotaServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713A01B4D65A000B86F71 /* NotaServices.swift */; };
+		6FA713A51B4D698000B86F71 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713A41B4D698000B86F71 /* DatabaseManager.swift */; };
+		6FA713AB1B4D69C800B86F71 /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713AA1B4D69C800B86F71 /* Nota.swift */; };
+		6FA713AD1B4D69C900B86F71 /* Partitura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713AC1B4D69C900B86F71 /* Partitura.swift */; };
+		6FA713AF1B4D6DCA00B86F71 /* PartituraServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713AE1B4D6DCA00B86F71 /* PartituraServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0732316F1B4C220B00790459 /* Nota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nota.swift; path = "C#/Nota.swift"; sourceTree = "<group>"; };
 		0A3B37CD1B4C085E00EE9333 /* C#.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C#.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B37D11B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +45,13 @@
 		0A3B37E51B4C085E00EE9333 /* C#Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C#Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B37EA1B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Tests.swift; sourceTree = "<group>"; };
-		0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		6FA7139A1B4D5EC900B86F71 /* Partitura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partitura.swift; sourceTree = "<group>"; };
+		6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartituraDAO.swift; path = "C#/PartituraDAO.swift"; sourceTree = "<group>"; };
+		6FA7139E1B4D652800B86F71 /* NotaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotaDAO.swift; path = "C#/NotaDAO.swift"; sourceTree = "<group>"; };
+		6FA713A01B4D65A000B86F71 /* NotaServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotaServices.swift; sourceTree = "<group>"; };
+		6FA713A41B4D698000B86F71 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = "C#/DatabaseManager.swift"; sourceTree = "<group>"; };
+		6FA713AA1B4D69C800B86F71 /* Nota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nota.swift; path = "C#/Nota.swift"; sourceTree = "<group>"; };
+		6FA713AC1B4D69C900B86F71 /* Partitura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Partitura.swift; path = "C#/Partitura.swift"; sourceTree = "<group>"; };
+		6FA713AE1B4D6DCA00B86F71 /* PartituraServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartituraServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,8 @@
 		0732316A1B4C1CF700790459 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6FA713A01B4D65A000B86F71 /* NotaServices.swift */,
+				6FA713AE1B4D6DCA00B86F71 /* PartituraServices.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -74,6 +84,8 @@
 		0732316B1B4C1D0600790459 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */,
+				6FA7139E1B4D652800B86F71 /* NotaDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -81,8 +93,8 @@
 		0732316C1B4C1D0B00790459 /* VO */ = {
 			isa = PBXGroup;
 			children = (
-				0732316F1B4C220B00790459 /* Nota.swift */,
-				6FA7139A1B4D5EC900B86F71 /* Partitura.swift */,
+				6FA713AC1B4D69C900B86F71 /* Partitura.swift */,
+				6FA713AA1B4D69C800B86F71 /* Nota.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -151,7 +163,7 @@
 			children = (
 				0732316C1B4C1D0B00790459 /* VO */,
 				0732316B1B4C1D0600790459 /* DAO */,
-				0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */,
+				6FA713A41B4D698000B86F71 /* DatabaseManager.swift */,
 			);
 			name = Persistence;
 			path = ..;
@@ -257,12 +269,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3B37F71B4C08CC00EE9333 /* DatabaseManager.swift in Sources */,
+				6FA713A11B4D65A000B86F71 /* NotaServices.swift in Sources */,
 				0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */,
-				6FA7139B1B4D5EC900B86F71 /* Partitura.swift in Sources */,
+				6FA713AF1B4D6DCA00B86F71 /* PartituraServices.swift in Sources */,
+				6FA713AD1B4D69C900B86F71 /* Partitura.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
-				073231701B4C220B00790459 /* Nota.swift in Sources */,
+				6FA7139D1B4D612500B86F71 /* PartituraDAO.swift in Sources */,
+				6FA7139F1B4D652800B86F71 /* NotaDAO.swift in Sources */,
+				6FA713A51B4D698000B86F71 /* DatabaseManager.swift in Sources */,
+				6FA713AB1B4D69C800B86F71 /* Nota.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
