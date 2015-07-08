@@ -7,6 +7,7 @@
     </entity>
     <entity name="Partitura" representedClassName="PRODUCT_MODULE_NAME.Partitura" syncable="YES">
         <attribute name="autor" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nome" attributeType="String" syncable="YES"/>
         <attribute name="qtdCompassos" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="ritmo" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -14,7 +15,7 @@
         <relationship name="notas" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Nota" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Partitura" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Nota" positionX="-63" positionY="27" width="128" height="90"/>
+        <element name="Partitura" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

@@ -19,6 +19,7 @@
 		0A3B37E01B4C085E00EE9333 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DE1B4C085E00EE9333 /* LaunchScreen.xib */; };
 		0A3B37EC1B4C085E00EE9333 /* C_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */; };
 		0A3B37F71B4C08CC00EE9333 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */; };
+		6FA7139B1B4D5EC900B86F71 /* Partitura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139A1B4D5EC900B86F71 /* Partitura.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		0A3B37EA1B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Tests.swift; sourceTree = "<group>"; };
 		0A3B37F61B4C08CC00EE9333 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		6FA7139A1B4D5EC900B86F71 /* Partitura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partitura.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0732316F1B4C220B00790459 /* Nota.swift */,
-				0732316D1B4C220B00790459 /* Partitura.swift */,
+				6FA7139A1B4D5EC900B86F71 /* Partitura.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -276,7 +278,6 @@
 				0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */,
 				0728385C1B4D62570012DFD3 /* LoadViewController.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
-				0732316E1B4C220B00790459 /* Partitura.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
 				073231701B4C220B00790459 /* Nota.swift in Sources */,
 			);
