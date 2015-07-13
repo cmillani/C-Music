@@ -17,13 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-tP-DbM">
+                                <rect key="frame" x="473" y="249" width="47" height="30"/>
+                                <state key="normal" title="TESTE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bSy-mw-2dx" kind="popoverPresentation" identifier="loadSegue" popoverAnchorView="Fed-tP-DbM" id="0kT-ui-6PA">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="bSy-mw-2dx" kind="popoverPresentation" identifier="loadingMenu" popoverAnchorView="8bC-Xf-vdC" id="4M7-qU-oo2">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +83,10 @@
                                     <constraint firstItem="ig1-Ml-tzj" firstAttribute="top" secondItem="POT-NQ-6Ln" secondAttribute="topMargin" id="sgb-RX-edP"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="240"/>
+                                <connections>
+                                    <outlet property="image" destination="ig1-Ml-tzj" id="c3C-Ej-qIv"/>
+                                    <outlet property="label" destination="Uwp-vn-HYj" id="Xfh-SD-fbo"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

@@ -22,7 +22,7 @@ class PartituraDAO {
         return results
     }
     
-    static func create(objectToBeInserted:Partitura)
+    static func insert(objectToBeInserted:Partitura)
     {
         // insert element into context
         DatabaseManager.sharedInstance.managedObjectContext?.insertObject(objectToBeInserted)

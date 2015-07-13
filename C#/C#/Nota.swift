@@ -16,4 +16,16 @@ class Nota: NSManagedObject {
     @NSManaged var tempo: NSNumber
     @NSManaged var partitura: Partitura
 
+    /// The designated initializer
+    convenience init()
+    {
+        // get context
+        let context:NSManagedObjectContext = DatabaseManager.sharedInstance.managedObjectContext!
+        
+        // create entity description
+        let entityDescription:NSEntityDescription? = NSEntityDescription.entityForName("Nota", inManagedObjectContext: context)
+        
+        // call super using
+        self.init(entity: entityDescription!, insertIntoManagedObjectContext: context)
+    }
 }

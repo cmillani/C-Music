@@ -16,6 +16,7 @@ class NotaServices
         nota.simbolo = simbolo
         nota.som = som
         nota.tempo = tempo
+        // insert it
         NotaDAO.insert(nota)
     }
     

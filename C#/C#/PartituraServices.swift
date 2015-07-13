@@ -9,7 +9,7 @@
 import Foundation
 
 class PartituraServices {
-    static func criarPartitura(autor:String, nome:String, qtdCompassos: NSNumber, ritmo: NSNumber, tempos: NSData, image: NSData, notas: NSOrderedSet){
+    static func criarPartitura(autor:String, nome:String, qtdCompassos: NSNumber, ritmo: NSNumber, tempos: NSData, image: NSData, notas: NSOrderedSet?){
         var partitura:Partitura = Partitura()
         partitura.autor = autor
         partitura.nome = nome
@@ -17,6 +17,8 @@ class PartituraServices {
         partitura.ritmo = ritmo
         partitura.tempos = tempos
         partitura.image = image
-        partitura.notas = notas
+        partitura.notas = (notas != nil) ? notas! : NSOrderedSet()
+        // insert it
+        PartituraDAO.insert(partitura)
     }
 }

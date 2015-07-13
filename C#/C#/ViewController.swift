@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+        var teste = "Teste".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        var ibagem = UIImage(named: "clave_sol");
+        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: 0, ritmo: 0, tempos: teste!, image: UIImagePNGRepresentation(ibagem), notas: nil)
+        *///Teste para inserção de partituras vazias na memoria.
         // Do any additional setup after loading the view, typically from a nib.
     }
 
