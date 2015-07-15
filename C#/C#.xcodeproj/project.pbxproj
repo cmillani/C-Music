@@ -16,6 +16,7 @@
 		0A3B37DD1B4C085E00EE9333 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DC1B4C085E00EE9333 /* Images.xcassets */; };
 		0A3B37E01B4C085E00EE9333 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DE1B4C085E00EE9333 /* LaunchScreen.xib */; };
 		0A3B37EC1B4C085E00EE9333 /* C_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */; };
+		6F15657D1B56ABDF001EE563 /* NewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15657C1B56ABDF001EE563 /* NewMainController.swift */; };
 		6FA7139D1B4D612500B86F71 /* PartituraDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */; };
 		6FA7139F1B4D652800B86F71 /* NotaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139E1B4D652800B86F71 /* NotaDAO.swift */; };
 		6FA713A11B4D65A000B86F71 /* NotaServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA713A01B4D65A000B86F71 /* NotaServices.swift */; };
@@ -50,6 +51,7 @@
 		0A3B37E51B4C085E00EE9333 /* C#Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C#Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B37EA1B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Tests.swift; sourceTree = "<group>"; };
+		6F15657C1B56ABDF001EE563 /* NewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainController.swift; sourceTree = "<group>"; };
 		6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartituraDAO.swift; path = "C#/PartituraDAO.swift"; sourceTree = "<group>"; };
 		6FA7139E1B4D652800B86F71 /* NotaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotaDAO.swift; path = "C#/NotaDAO.swift"; sourceTree = "<group>"; };
 		6FA713A01B4D65A000B86F71 /* NotaServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotaServices.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */,
 				0A3B37D71B4C085E00EE9333 /* ViewController.swift */,
 				0A3B37D91B4C085E00EE9333 /* Main.storyboard */,
+				6F15657C1B56ABDF001EE563 /* NewMainController.swift */,
 				0A3B37DC1B4C085E00EE9333 /* Images.xcassets */,
 				0A3B37DE1B4C085E00EE9333 /* LaunchScreen.xib */,
 				0A3B37D41B4C085E00EE9333 /* C_.xcdatamodeld */,
@@ -345,6 +348,7 @@
 				6FA713A11B4D65A000B86F71 /* NotaServices.swift in Sources */,
 				0A3B37D81B4C085E00EE9333 /* ViewController.swift in Sources */,
 				6FA713AF1B4D6DCA00B86F71 /* PartituraServices.swift in Sources */,
+				6F15657D1B56ABDF001EE563 /* NewMainController.swift in Sources */,
 				6FA713AD1B4D69C900B86F71 /* Partitura.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
