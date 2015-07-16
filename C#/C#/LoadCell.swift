@@ -17,6 +17,7 @@ class LoadCell: UICollectionViewCell {
     
     func setupCell(partiture:Partitura)
     {
+
         self.partiture = partiture
         self.image.backgroundColor = UIColor(red: 52, green: 203, blue: 102, alpha: 50)
         self.image.image = UIImage(data: partiture.image)

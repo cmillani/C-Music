@@ -8,8 +8,14 @@
 
 import UIKit
 
-class LoadViewController: UICollectionViewController {
+protocol LoadViewControllerDelegate
+{
+    func loadSelectedPartiture(partitura: Partitura)
+}
+
+class LoadViewController: UICollectionViewController , UIPopoverPresentationControllerDelegate{
     var savedPartitures:[Partitura]?
+    var delegate:LoadViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.savedPartitures = PartituraDAO.findAll()
@@ -44,7 +50,7 @@ extension LoadViewController : UICollectionViewDataSource
 extension LoadViewController : UICollectionViewDelegateFlowLayout
 {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let size = CGSize(width: 200, height: 240)
+        let size = CGSize(width: 104, height: 130)
         return size
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
@@ -53,6 +59,14 @@ extension LoadViewController : UICollectionViewDelegateFlowLayout
     }
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         NSLog("Clicou %@", indexPath)
+        var cell = collectionView.cellForItemAtIndexPath(indexPath) as? LoadCell
+        if ((delegate) != nil)
+        {
+            if (cell?.partiture != nil)
+            {
+                delegate?.loadSelectedPartiture(cell!.partiture!)
+            }
+        }
     }
 }
 
