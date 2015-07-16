@@ -33,6 +33,7 @@
 		18F97D2C1B582EEC0095BDAF /* F2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 18F97D201B582EEC0095BDAF /* F2.aif */; };
 		18F97D2D1B582EEC0095BDAF /* G#2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 18F97D211B582EEC0095BDAF /* G#2.aif */; };
 		18F97D2E1B582EEC0095BDAF /* G2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 18F97D221B582EEC0095BDAF /* G2.aif */; };
+		18F97D301B5831500095BDAF /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D2F1B5831500095BDAF /* RecordViewController.swift */; };
 		6F15657D1B56ABDF001EE563 /* NewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15657C1B56ABDF001EE563 /* NewMainController.swift */; };
 		6FA7139D1B4D612500B86F71 /* PartituraDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */; };
 		6FA7139F1B4D652800B86F71 /* NotaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139E1B4D652800B86F71 /* NotaDAO.swift */; };
@@ -86,6 +87,7 @@
 		18F97D201B582EEC0095BDAF /* F2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = F2.aif; sourceTree = "<group>"; };
 		18F97D211B582EEC0095BDAF /* G#2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G#2.aif"; sourceTree = "<group>"; };
 		18F97D221B582EEC0095BDAF /* G2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = G2.aif; sourceTree = "<group>"; };
+		18F97D2F1B5831500095BDAF /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		6F15657C1B56ABDF001EE563 /* NewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainController.swift; sourceTree = "<group>"; };
 		6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartituraDAO.swift; path = "C#/PartituraDAO.swift"; sourceTree = "<group>"; };
 		6FA7139E1B4D652800B86F71 /* NotaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotaDAO.swift; path = "C#/NotaDAO.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				079B18131B57F9AA0074FD1B /* UI */,
 				0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */,
 				0A3B37D71B4C085E00EE9333 /* ViewController.swift */,
+				18F97D2F1B5831500095BDAF /* RecordViewController.swift */,
 				0A3B37D91B4C085E00EE9333 /* Main.storyboard */,
 				6F15657C1B56ABDF001EE563 /* NewMainController.swift */,
 				0A3B37DC1B4C085E00EE9333 /* Images.xcassets */,
@@ -441,6 +444,7 @@
 				18F97D141B58175B0095BDAF /* Piano.swift in Sources */,
 				6F15657D1B56ABDF001EE563 /* NewMainController.swift in Sources */,
 				18F97D121B58175B0095BDAF /* PianoAudioController.swift in Sources */,
+				18F97D301B5831500095BDAF /* RecordViewController.swift in Sources */,
 				6FA713AD1B4D69C900B86F71 /* Partitura.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,

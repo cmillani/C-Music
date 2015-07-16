@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G3Z-Nj-C5S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -82,6 +82,276 @@
             </objects>
             <point key="canvasLocation" x="973" y="-47"/>
         </scene>
+        <!--RecordView-->
+        <scene sceneID="vtR-2C-hPP">
+            <objects>
+                <viewController title="RecordView" id="G3Z-Nj-C5S" customClass="RecordViewController" customModule="C_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3th-Wx-yrb"/>
+                        <viewControllerLayoutGuide type="bottom" id="kUC-8g-blo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNP-gt-laf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-T1-Np2" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-aN-hSL" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="Jzn-nJ-0YQ" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-WG-4xi" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="249" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-6J-WeZ" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="322" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-ma-3Q8" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="396" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyWhite" highlightedImage="KeyWhiteHigh" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-Ir-q4N" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="470" y="440" width="77" height="323"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBlack" highlightedImage="KeyBlackHigh" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-gt-oQR" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="76" y="440" width="51" height="185"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBlack" highlightedImage="KeyBlackHigh" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-vT-dCw" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="299" y="440" width="51" height="185"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBlack" highlightedImage="KeyBlackHigh" translatesAutoresizingMaskIntoConstraints="NO" id="Svm-tz-rTc" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="445" y="440" width="51" height="185"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBlack" highlightedImage="KeyBlackHigh" translatesAutoresizingMaskIntoConstraints="NO" id="eVR-hz-gKY" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="370" y="440" width="51" height="185"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBlack" highlightedImage="KeyBlackHigh" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-CT-XzI" customClass="PianoKey" customModule="C_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="154" y="440" width="51" height="185"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3L-hg-6b6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="50" y="724" width="31" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFF-8a-aA4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="724" width="37" height="28"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnJ-4f-Iua">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="198" y="724" width="31" height="28"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biE-Gy-GOF">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="272" y="724" width="31" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwW-oa-0nA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="345" y="724" width="31" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq6-hr-ZKj">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="419" y="724" width="31" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-yI-nWc">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="493" y="726" width="31" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1I-4V-lpZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="82" y="587" width="45" height="29"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D#2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPh-ct-GF1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="587" width="45" height="29"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F#2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXT-xh-vtc">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="305" y="587" width="45" height="29"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G#2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra2-rL-g91">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="376" y="587" width="45" height="29"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A#2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L30-93-dh9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="451" y="589" width="45" height="29"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Mrb-T1-Np2"/>
+                                <exclude reference="8LA-aN-hSL"/>
+                                <exclude reference="Jzn-nJ-0YQ"/>
+                                <exclude reference="Qmp-WG-4xi"/>
+                                <exclude reference="bDj-6J-WeZ"/>
+                                <exclude reference="U7E-ma-3Q8"/>
+                                <exclude reference="ow9-Ir-q4N"/>
+                                <exclude reference="HAt-gt-oQR"/>
+                                <exclude reference="pLD-vT-dCw"/>
+                                <exclude reference="Svm-tz-rTc"/>
+                                <exclude reference="eVR-hz-gKY"/>
+                                <exclude reference="BwG-CT-XzI"/>
+                                <exclude reference="M3L-hg-6b6"/>
+                                <exclude reference="HFF-8a-aA4"/>
+                                <exclude reference="JnJ-4f-Iua"/>
+                                <exclude reference="biE-Gy-GOF"/>
+                                <exclude reference="FwW-oa-0nA"/>
+                                <exclude reference="Gq6-hr-ZKj"/>
+                                <exclude reference="kJp-yI-nWc"/>
+                                <exclude reference="X1I-4V-lpZ"/>
+                                <exclude reference="sPh-ct-GF1"/>
+                                <exclude reference="BXT-xh-vtc"/>
+                                <exclude reference="Ra2-rL-g91"/>
+                                <exclude reference="L30-93-dh9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Mrb-T1-Np2"/>
+                                <include reference="8LA-aN-hSL"/>
+                                <include reference="Jzn-nJ-0YQ"/>
+                                <include reference="Qmp-WG-4xi"/>
+                                <include reference="bDj-6J-WeZ"/>
+                                <include reference="U7E-ma-3Q8"/>
+                                <include reference="ow9-Ir-q4N"/>
+                                <include reference="HAt-gt-oQR"/>
+                                <include reference="pLD-vT-dCw"/>
+                                <include reference="Svm-tz-rTc"/>
+                                <include reference="eVR-hz-gKY"/>
+                                <include reference="BwG-CT-XzI"/>
+                                <include reference="M3L-hg-6b6"/>
+                                <include reference="HFF-8a-aA4"/>
+                                <include reference="JnJ-4f-Iua"/>
+                                <include reference="biE-Gy-GOF"/>
+                                <include reference="FwW-oa-0nA"/>
+                                <include reference="Gq6-hr-ZKj"/>
+                                <include reference="kJp-yI-nWc"/>
+                                <include reference="X1I-4V-lpZ"/>
+                                <include reference="sPh-ct-GF1"/>
+                                <include reference="BXT-xh-vtc"/>
+                                <include reference="Ra2-rL-g91"/>
+                                <include reference="L30-93-dh9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="A2akey" destination="Svm-tz-rTc" id="tg3-xo-Xck"/>
+                        <outlet property="A2key" destination="U7E-ma-3Q8" id="eqG-F6-mgb"/>
+                        <outlet property="B2key" destination="ow9-Ir-q4N" id="FaT-h7-ydf"/>
+                        <outlet property="C2akey" destination="HAt-gt-oQR" id="xiV-ag-NEW"/>
+                        <outlet property="C2key" destination="Mrb-T1-Np2" id="HMB-xD-2am"/>
+                        <outlet property="D2akey" destination="BwG-CT-XzI" id="RQO-Y8-vNr"/>
+                        <outlet property="D2key" destination="8LA-aN-hSL" id="Cqk-cS-NVe"/>
+                        <outlet property="E2key" destination="Jzn-nJ-0YQ" id="ZWw-Vd-Es6"/>
+                        <outlet property="F2akey" destination="pLD-vT-dCw" id="fJR-JE-mCd"/>
+                        <outlet property="F2key" destination="Qmp-WG-4xi" id="nZ4-QP-kGD"/>
+                        <outlet property="G2akey" destination="eVR-hz-gKY" id="yNA-XC-wbw"/>
+                        <outlet property="G2key" destination="bDj-6J-WeZ" id="WDw-dv-Qzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKK-i1-YAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="608"/>
+        </scene>
         <!--Load View Controller-->
         <scene sceneID="WVd-LL-Rbt">
             <objects>
@@ -147,6 +417,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="KeyBlack" width="34" height="114"/>
+        <image name="KeyBlackHigh" width="34" height="114"/>
+        <image name="KeyWhite" width="50" height="195"/>
+        <image name="KeyWhiteHigh" width="50" height="195"/>
         <image name="clave_sol" width="600" height="600"/>
         <image name="nota" width="62" height="62"/>
     </resources>
