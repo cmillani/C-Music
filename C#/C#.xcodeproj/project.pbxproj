@@ -34,6 +34,7 @@
 		18F97D2D1B582EEC0095BDAF /* G#2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 18F97D211B582EEC0095BDAF /* G#2.aif */; };
 		18F97D2E1B582EEC0095BDAF /* G2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 18F97D221B582EEC0095BDAF /* G2.aif */; };
 		18F97D301B5831500095BDAF /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D2F1B5831500095BDAF /* RecordViewController.swift */; };
+		18F97D331B5832990095BDAF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D321B5832990095BDAF /* CollectionViewCell.swift */; };
 		6F15657D1B56ABDF001EE563 /* NewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15657C1B56ABDF001EE563 /* NewMainController.swift */; };
 		6FA7139D1B4D612500B86F71 /* PartituraDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */; };
 		6FA7139F1B4D652800B86F71 /* NotaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7139E1B4D652800B86F71 /* NotaDAO.swift */; };
@@ -88,6 +89,7 @@
 		18F97D211B582EEC0095BDAF /* G#2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G#2.aif"; sourceTree = "<group>"; };
 		18F97D221B582EEC0095BDAF /* G2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = G2.aif; sourceTree = "<group>"; };
 		18F97D2F1B5831500095BDAF /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		18F97D321B5832990095BDAF /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6F15657C1B56ABDF001EE563 /* NewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainController.swift; sourceTree = "<group>"; };
 		6FA7139C1B4D612500B86F71 /* PartituraDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartituraDAO.swift; path = "C#/PartituraDAO.swift"; sourceTree = "<group>"; };
 		6FA7139E1B4D652800B86F71 /* NotaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotaDAO.swift; path = "C#/NotaDAO.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		0A3B37CF1B4C085E00EE9333 /* C# */ = {
 			isa = PBXGroup;
 			children = (
+				18F97D311B58327C0095BDAF /* CollectionView - Partitura */,
 				18F97CEE1B5815780095BDAF /* Piano */,
 				0732316A1B4C1CF700790459 /* Services */,
 				0A3B37F51B4C089000EE9333 /* Persistence */,
@@ -272,6 +275,14 @@
 			children = (
 			);
 			name = AudioFiles;
+			sourceTree = "<group>";
+		};
+		18F97D311B58327C0095BDAF /* CollectionView - Partitura */ = {
+			isa = PBXGroup;
+			children = (
+				18F97D321B5832990095BDAF /* CollectionViewCell.swift */,
+			);
+			name = "CollectionView - Partitura";
 			sourceTree = "<group>";
 		};
 		872AAFC623BE64544D096C8A /* Frameworks */ = {
@@ -448,6 +459,7 @@
 				6FA713AD1B4D69C900B86F71 /* Partitura.swift in Sources */,
 				0A3B37D31B4C085E00EE9333 /* AppDelegate.swift in Sources */,
 				0A3B37D61B4C085E00EE9333 /* C_.xcdatamodeld in Sources */,
+				18F97D331B5832990095BDAF /* CollectionViewCell.swift in Sources */,
 				07E704BB1B53DDFB00CF3FC0 /* LoadViewController.swift in Sources */,
 				18F97D131B58175B0095BDAF /* PianoKey.swift in Sources */,
 				18F97D161B5828120095BDAF /* PianoSound.swift in Sources */,

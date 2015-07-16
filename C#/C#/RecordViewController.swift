@@ -8,8 +8,17 @@
 
 import UIKit
 
-class RecordViewController: UIViewController{
+
+class RecordViewController: UIViewController, UICollectionViewDataSource{
     
+    //CollectionViewController
+    @IBOutlet weak var collectionManager: UICollectionView!
+
+    //TableData
+    var tableData: [String]? = ["clave_sol","nota"]
+
+
+    //Piano keys
     @IBOutlet weak var C2key: PianoKey?
     @IBOutlet weak var C2akey: PianoKey?
     @IBOutlet weak var D2key: PianoKey?
@@ -26,7 +35,9 @@ class RecordViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Start the engine
+        self.collectionManager.dataSource = self
+        self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
+        //Start the engine and the Piano
         PianoAudioController.sharedInstance.startEngine()
         setKeys()
         
@@ -34,6 +45,7 @@ class RecordViewController: UIViewController{
     
     func setKeys()
     {
+        //Set the keys sounds
         self.C2key!.setKeyNote(0)
         self.C2akey!.setKeyNote(1)
         self.D2key!.setKeyNote(2)
@@ -47,16 +59,63 @@ class RecordViewController: UIViewController{
         self.A2akey!.setKeyNote(10)
         self.B2key!.setKeyNote(11)
         
+        //Set the views
+        C2key?.outerView = self
+        C2akey?.outerView = self
+        D2key?.outerView = self
+        D2akey?.outerView = self
+        E2key?.outerView = self
+        F2key?.outerView = self
+        F2akey?.outerView = self
+        G2key?.outerView = self
+        G2akey?.outerView = self
+        A2key?.outerView = self
+        A2akey?.outerView = self
+        B2key?.outerView = self
+
     }
     
+    func addNote()
+    {
+        tableData?.append("nota")
+        self.collectionManager.reloadData()
+    }
+    
+    @IBAction func reload(sender: AnyObject) {
+        tableData?.append("nota")
+        self.collectionManager.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
-
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let qtty = tableData?.count
+        {
+            return qtty
+        }
+        else
+        {
+            return 0
+        }
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        cell.setupCell(self.tableData![indexPath.item])
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println("Cell \(indexPath.row) selected")
+    }
     
     
     

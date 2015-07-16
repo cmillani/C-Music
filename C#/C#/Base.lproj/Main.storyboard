@@ -274,6 +274,63 @@
                                     <rect key="frame" x="451" y="589" width="45" height="29"/>
                                 </variation>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GRt-sb-W1J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rro-Ra-YDU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="N41-ZO-Dke" customClass="CollectionViewCell" customModule="C_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZX-Eh-YwP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="YZX-Eh-YwP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="subviews">
+                                                <include reference="YZX-Eh-YwP"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="image" destination="YZX-Eh-YwP" id="ccW-b2-11H"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="768" height="325"/>
+                                </variation>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32N-M4-QTB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="reload">
+                                    <color key="titleColor" red="0.97747300703806761" green="0.98126466152815017" blue="0.94091036026505426" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="485" y="385" width="43" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="reload:" destination="G3Z-Nj-C5S" eventType="touchUpInside" id="bXM-tx-68M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -302,6 +359,8 @@
                                 <exclude reference="BXT-xh-vtc"/>
                                 <exclude reference="Ra2-rL-g91"/>
                                 <exclude reference="L30-93-dh9"/>
+                                <exclude reference="GRt-sb-W1J"/>
+                                <exclude reference="32N-M4-QTB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -330,6 +389,8 @@
                                 <include reference="BXT-xh-vtc"/>
                                 <include reference="Ra2-rL-g91"/>
                                 <include reference="L30-93-dh9"/>
+                                <include reference="GRt-sb-W1J"/>
+                                <include reference="32N-M4-QTB"/>
                             </mask>
                         </variation>
                     </view>
@@ -346,11 +407,12 @@
                         <outlet property="F2key" destination="Qmp-WG-4xi" id="nZ4-QP-kGD"/>
                         <outlet property="G2akey" destination="eVR-hz-gKY" id="yNA-XC-wbw"/>
                         <outlet property="G2key" destination="bDj-6J-WeZ" id="WDw-dv-Qzy"/>
+                        <outlet property="collectionManager" destination="GRt-sb-W1J" id="iKW-bK-Gop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKK-i1-YAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="608"/>
+            <point key="canvasLocation" x="970.5" y="607.5"/>
         </scene>
         <!--Load View Controller-->
         <scene sceneID="WVd-LL-Rbt">

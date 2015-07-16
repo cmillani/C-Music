@@ -19,18 +19,31 @@ class PianoKey: UIImageView{
     //Timer para contar o tempo
     var timer : NSTimer!
     
+    
+    //View que esta contida
+    var outerView : RecordViewController!
+    
     //Incrementa o tempo em 0.1 segundos
     func updateTime()
     {
         timeTouched += 0.1
     }
     
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //Adiciona nota à partitura
+        
         //Comeca a tocar o som da nota
         Piano.sharedInstance.playNote(note)
         
         //Highlight da imagem, para dar feedback ao usuario
         self.highlighted = true
+        
+        //Atualiza o array
+        
+        self.outerView.tableData?.append("nota")
+        self.outerView.collectionManager.reloadData()
+        
         
         //Inicializa o timer
         let updateSelector : Selector = "updateTime"
