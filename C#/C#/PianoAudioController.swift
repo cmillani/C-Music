@@ -10,11 +10,11 @@ import Foundation
 
 class PianoAudioController {
     
+    //Singleton
     static let sharedInstance = PianoAudioController()
     
+    //AudioController é o objeto do AmazingAudioEngine responsavel por tocar e processar o audio
     var audioController = AEAudioController(audioDescription: AEAudioController.nonInterleaved16BitStereoAudioDescription())
-    
-    
     func startEngine(){
     
     //Tratamento de Erro
