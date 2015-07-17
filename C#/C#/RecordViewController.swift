@@ -113,6 +113,9 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
         //Adiciona a nota ao tableData (vetor de notas) e recarrega a view
         tableData?.append(simboloDuracao)
         self.collectionManager.reloadData()
+        var item = collectionView(collectionManager, numberOfItemsInSection: 0) - 1
+        var lastItemIndex = NSIndexPath(forItem: item, inSection: 0)
+        self.collectionManager?.scrollToItemAtIndexPath(lastItemIndex, atScrollPosition: UICollectionViewScrollPosition.Top, animated: false)
         
     }
     
