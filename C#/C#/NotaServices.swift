@@ -10,7 +10,7 @@ import Foundation
 
 class NotaServices
 {
-    static func criarNota(simbolo:NSInteger, som: NSInteger, tempo: NSInteger)
+    static func criarNota(simbolo:NSInteger, som: NSInteger, tempo: Float)
     {
         var nota:Nota = Nota()
         nota.simbolo = simbolo

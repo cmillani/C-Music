@@ -402,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKK-i1-YAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="681"/>
+            <point key="canvasLocation" x="966" y="-53"/>
         </scene>
         <!--Load View Controller-->
         <scene sceneID="WVd-LL-Rbt">
@@ -473,9 +473,7 @@
         <image name="KeyBlackHigh" width="34" height="114"/>
         <image name="KeyWhite" width="50" height="195"/>
         <image name="KeyWhiteHigh" width="50" height="195"/>
-        <image name="clave_sol" width="600" height="600"/>
         <image name="load" width="256" height="256"/>
-        <image name="nota" width="62" height="62"/>
         <image name="save" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

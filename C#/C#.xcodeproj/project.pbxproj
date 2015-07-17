@@ -177,11 +177,11 @@
 		0A3B37CF1B4C085E00EE9333 /* C# */ = {
 			isa = PBXGroup;
 			children = (
-				18F97D311B58327C0095BDAF /* CollectionView - Partitura */,
 				18F97CEE1B5815780095BDAF /* Piano */,
 				0732316A1B4C1CF700790459 /* Services */,
 				0A3B37F51B4C089000EE9333 /* Persistence */,
 				0728385A1B4D62380012DFD3 /* LoadScreen */,
+				18F97D311B58327C0095BDAF /* RecordScreen */,
 				0A3B37D21B4C085E00EE9333 /* AppDelegate.swift */,
 				0A3B37D71B4C085E00EE9333 /* ViewController.swift */,
 				0A3B37D91B4C085E00EE9333 /* Main.storyboard */,
@@ -261,13 +261,13 @@
 			name = AudioFiles;
 			sourceTree = "<group>";
 		};
-		18F97D311B58327C0095BDAF /* CollectionView - Partitura */ = {
+		18F97D311B58327C0095BDAF /* RecordScreen */ = {
 			isa = PBXGroup;
 			children = (
 				18F97D321B5832990095BDAF /* CollectionViewCell.swift */,
 				18F97D2F1B5831500095BDAF /* RecordViewController.swift */,
 			);
-			name = "CollectionView - Partitura";
+			name = RecordScreen;
 			sourceTree = "<group>";
 		};
 		872AAFC623BE64544D096C8A /* Frameworks */ = {

@@ -16,7 +16,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
 
     //TableData
     var tableData: [String]? = ["clave_sol","colcheia"]
-
+    var notas: [Nota]? = []
 
     //Piano keys
     @IBOutlet weak var C2key: PianoKey?
@@ -85,6 +85,13 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         
         //Com base no tempo que o usuario apertou a nota, selecionamos a imagem que sera adicionada na partitura
         var simboloDuracao: String
+        
+        //Persistencia de dados
+        var note:Nota = Nota()
+        note.simbolo = nota
+        note.som = nota
+        note.tempo = duracao
+        notas!.append(note)
         
         //A duracao nos da qual nota escolher
         //TO DO: Mudar apos a challenge para que fique conceitualmente correto
@@ -158,7 +165,9 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     }
     
     @IBAction func save(sender: AnyObject) {
-        
+        var ibagem = UIImage(named: "clave_sol");
+        var notaArray : NSOrderedSet? = NSOrderedSet(array: notas!)
+//        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: NSNumber(int: 0), ritmo: NSNumber(int: 0), tempos: NSNumber(int: 0), image: UIImagePNGRepresentation(ibagem)!, notas: notaArray)
     }
     
     @IBAction func load(sender: AnyObject) {
