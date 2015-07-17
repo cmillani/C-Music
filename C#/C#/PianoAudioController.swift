@@ -24,7 +24,7 @@ class PianoAudioController {
     
     if(!result)
     {
-    NSLog("Erro inicializando a Audio Engine")
+        NSLog("Erro inicializando a Audio Engine")
     }
  }
     

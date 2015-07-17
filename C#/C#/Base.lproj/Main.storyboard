@@ -318,8 +318,45 @@
                                     <rect key="frame" x="564" y="612" width="45" height="29"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-dl-bhJ">
+                                <rect key="frame" x="509" y="540" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7jL-dl-bhJ" secondAttribute="height" multiplier="1:1" id="AP8-ry-EiF"/>
+                                    <constraint firstAttribute="height" constant="50" id="VT3-fd-t5x"/>
+                                </constraints>
+                                <state key="normal" image="load">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="G3Z-Nj-C5S" eventType="touchUpInside" id="HBr-Pn-oEU"/>
+                                    <segue destination="bSy-mw-2dx" kind="popoverPresentation" identifier="defaultLoader" popoverAnchorView="7jL-dl-bhJ" id="rUC-6Z-Q0K">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZQ-OW-MqL">
+                                <rect key="frame" x="444" y="540" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oZQ-OW-MqL" secondAttribute="height" multiplier="1:1" id="ZXL-DF-waY"/>
+                                    <constraint firstAttribute="width" constant="50" id="kes-fR-VcP"/>
+                                </constraints>
+                                <state key="normal" image="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="G3Z-Nj-C5S" eventType="touchUpInside" id="pwF-ru-Jpw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97747300699999995" green="0.98126466150000002" blue="0.94091036029999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oZQ-OW-MqL" firstAttribute="bottom" secondItem="7jL-dl-bhJ" secondAttribute="bottom" id="Jm3-Sh-nwr"/>
+                            <constraint firstAttribute="centerY" secondItem="7jL-dl-bhJ" secondAttribute="centerY" id="LTE-GZ-TG2"/>
+                            <constraint firstItem="7jL-dl-bhJ" firstAttribute="leading" secondItem="oZQ-OW-MqL" secondAttribute="trailing" constant="15" id="QTs-3Q-LpR"/>
+                            <constraint firstAttribute="centerX" secondItem="7jL-dl-bhJ" secondAttribute="centerX" id="bVE-8I-2tC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7jL-dl-bhJ" secondAttribute="trailing" constant="25" id="fH8-0q-eAE"/>
+                            <constraint firstItem="kUC-8g-blo" firstAttribute="top" secondItem="7jL-dl-bhJ" secondAttribute="bottom" constant="10" id="uQc-6D-Ama"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="GRt-sb-W1J"/>
@@ -347,6 +384,10 @@
                                 <exclude reference="BXT-xh-vtc"/>
                                 <exclude reference="Ra2-rL-g91"/>
                                 <exclude reference="L30-93-dh9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LTE-GZ-TG2"/>
+                                <exclude reference="bVE-8I-2tC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -397,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKK-i1-YAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954.75" y="681"/>
+            <point key="canvasLocation" x="954" y="681"/>
         </scene>
         <!--Load View Controller-->
         <scene sceneID="WVd-LL-Rbt">
@@ -469,6 +510,11 @@
         <image name="KeyWhite" width="50" height="195"/>
         <image name="KeyWhiteHigh" width="50" height="195"/>
         <image name="clave_sol" width="600" height="600"/>
+        <image name="load" width="256" height="256"/>
         <image name="nota" width="62" height="62"/>
+        <image name="save" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rUC-6Z-Q0K"/>
+    </inferredMetricsTieBreakers>
 </document>
