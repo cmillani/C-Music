@@ -22,9 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="1100"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUW-tl-5ft">
-                                <rect key="frame" x="325" y="500" width="150" height="50"/>
+                                <rect key="frame" x="100" y="500" width="600" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="New">
+                                <state key="normal" title="New Sheet Music">
                                     <color key="titleColor" red="1" green="0.8060011064" blue="0.049130386759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -32,8 +32,14 @@
                                     <segue destination="G3Z-Nj-C5S" kind="show" id="At1-uF-Uso"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Note" translatesAutoresizingMaskIntoConstraints="NO" id="nlD-YZ-9vh">
+                                <rect key="frame" x="360" y="870" width="80" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colection" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-6S-YD8">
+                                <rect key="frame" x="380" y="820" width="40" height="50"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-4e-zcp">
-                                <rect key="frame" x="300" y="500" width="200" height="50"/>
+                                <rect key="frame" x="100" y="500" width="600" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Collection">
                                     <color key="titleColor" red="1" green="0.8060011064" blue="0.049130386759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,12 +51,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Note" translatesAutoresizingMaskIntoConstraints="NO" id="nlD-YZ-9vh">
-                                <rect key="frame" x="360" y="870" width="80" height="100"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colection" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-6S-YD8">
-                                <rect key="frame" x="380" y="820" width="40" height="50"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

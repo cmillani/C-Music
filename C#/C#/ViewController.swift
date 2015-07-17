@@ -27,7 +27,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionButton.hidden = true
-        
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
         swipeLeft.numberOfTouchesRequired = 1
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
@@ -44,7 +43,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         
         self.path2.moveToPoint(CGPoint(x: 235, y: 845))
         self.path2.addCurveToPoint(CGPoint(x: 380, y: 820), controlPoint1: CGPoint(x: 270, y: 825), controlPoint2: CGPoint(x: 320, y: 835))
-        
         
         self.path3.moveToPoint(CGPoint(x: 380, y: 820))
         self.path3.addCurveToPoint(CGPoint(x: 485, y: 845), controlPoint1: CGPoint(x: 410, y: 825), controlPoint2: CGPoint(x: 440, y: 835))

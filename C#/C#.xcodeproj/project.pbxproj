@@ -16,6 +16,8 @@
 		0A3B37DD1B4C085E00EE9333 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DC1B4C085E00EE9333 /* Images.xcassets */; };
 		0A3B37E01B4C085E00EE9333 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B37DE1B4C085E00EE9333 /* LaunchScreen.xib */; };
 		0A3B37EC1B4C085E00EE9333 /* C_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */; };
+		0AF5520C1B596F4000FE1A4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF5520E1B596F4000FE1A4B /* InfoPlist.strings */; };
+		0AF552111B596F4100FE1A4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF552131B596F4100FE1A4B /* InfoPlist.strings */; };
 		18F97D121B58175B0095BDAF /* PianoAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D0F1B58175B0095BDAF /* PianoAudioController.swift */; };
 		18F97D131B58175B0095BDAF /* PianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D101B58175B0095BDAF /* PianoKey.swift */; };
 		18F97D141B58175B0095BDAF /* Piano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F97D111B58175B0095BDAF /* Piano.swift */; };
@@ -68,6 +70,10 @@
 		0A3B37E51B4C085E00EE9333 /* C#Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C#Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B37EA1B4C085E00EE9333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3B37EB1B4C085E00EE9333 /* C_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Tests.swift; sourceTree = "<group>"; };
+		0AF552081B596BDF00FE1A4B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		0AF552091B596BDF00FE1A4B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0AF5520D1B596F4000FE1A4B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AF552121B596F4100FE1A4B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18F97D0E1B5817440095BDAF /* PianoTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PianoTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		18F97D0F1B58175B0095BDAF /* PianoAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoAudioController.swift; sourceTree = "<group>"; };
 		18F97D101B58175B0095BDAF /* PianoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoKey.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 		0A3B37D01B4C085E00EE9333 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0AF5520E1B596F4000FE1A4B /* InfoPlist.strings */,
 				18F97D171B582EEC0095BDAF /* A#2.aif */,
 				18F97D181B582EEC0095BDAF /* A2.aif */,
 				18F97D191B582EEC0095BDAF /* B2.aif */,
@@ -226,6 +233,7 @@
 		0A3B37E91B4C085E00EE9333 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0AF552131B596F4100FE1A4B /* InfoPlist.strings */,
 				0A3B37EA1B4C085E00EE9333 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -370,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F97D2E1B582EEC0095BDAF /* G2.aif in Resources */,
+				0AF5520C1B596F4000FE1A4B /* InfoPlist.strings in Resources */,
 				18F97D2C1B582EEC0095BDAF /* F2.aif in Resources */,
 				18F97D2B1B582EEC0095BDAF /* F#2.aif in Resources */,
 				18F97D291B582EEC0095BDAF /* D2.aif in Resources */,
@@ -391,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF552111B596F4100FE1A4B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +488,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A3B37DA1B4C085E00EE9333 /* Base */,
+				0AF552081B596BDF00FE1A4B /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -486,8 +497,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A3B37DF1B4C085E00EE9333 /* Base */,
+				0AF552091B596BDF00FE1A4B /* pt */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0AF5520E1B596F4000FE1A4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF5520D1B596F4000FE1A4B /* pt */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AF552131B596F4100FE1A4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF552121B596F4100FE1A4B /* pt */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
