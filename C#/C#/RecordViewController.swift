@@ -37,9 +37,11 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.noteCount = 0
+        
+        
         self.collectionManager.dataSource = self
         self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
+        
         //Start the engine and the Piano
         PianoAudioController.sharedInstance.startEngine()
         setKeys()
@@ -48,7 +50,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     
     func setKeys()
     {
-        //Set the keys sounds
+        //Seta os sons de cada tecla
         self.C2key!.setKeyNote(0)
         self.C2akey!.setKeyNote(1)
         self.D2key!.setKeyNote(2)
@@ -62,7 +64,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
         self.A2akey!.setKeyNote(10)
         self.B2key!.setKeyNote(11)
         
-        //Set the views
+        //Linka as teclas com as views
         C2key?.outerView = self
         C2akey?.outerView = self
         D2key?.outerView = self
@@ -78,18 +80,40 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
 
     }
     
-    func addNote()
+    func addNote(nota : Int, duracao: Float)
     {
         
-        tableData?.append("nota")
+        //Com base no tempo que o usuario apertou a nota, selecionamos a imagem que sera adicionada na partitura
+        var simboloDuracao: String
+        
+        //A duracao nos da qual nota escolher
+        //TO DO: Mudar apos a challenge para que fique conceitualmente correto
+        //TO DO: Implementar conjuncao com a classe Nota, para que fique mais simples
+        if(duracao <= 0.5)
+        {
+            simboloDuracao = "colcheia"
+        }
+        else{
+            if(duracao <= 1.5)
+            {
+            simboloDuracao = "seminima"
+            }
+            else{
+                if(duracao <= 2.5)
+                {
+                simboloDuracao = "semibreve"
+                }
+                else
+                {
+                simboloDuracao = "breve"
+                }
+            }
+        }
+
+        //Adiciona a nota ao tableData (vetor de notas) e recarrega a view
+        tableData?.append(simboloDuracao)
         self.collectionManager.reloadData()
         
-        // var count = tableData?.count
-                //var indexPath = NSIndexPath(index: 1)
-        //NSLog("\(indexPath.length)")
-        //self.collectionManager.reloadItemsAtIndexPaths([indexPath])
-        //self.noteCount++
-        //self.collectionManager.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,8 +138,15 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        
         cell.setupCell(self.tableData![indexPath.item])
+        
+        if(cell.noteName != "clave_sol"){
+        cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        }
+        
         return cell
     }
     

@@ -52,7 +52,7 @@ class PianoKey: UIImageView{
         self.highlighted = false
         
         //Atualiza o array
-        self.outerView.addNote()
+        self.outerView.addNote(note, duracao: timeTouched)
         
         //Reseta o timer
         self.timer.invalidate()
