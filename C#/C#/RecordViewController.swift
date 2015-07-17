@@ -15,7 +15,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var collectionManager: UICollectionView!
 
     //TableData
-    var tableData: [String]? = ["clave_sol","nota"]
+    var tableData: [String]? = ["clave_sol","colcheia"]
 
 
     //Piano keys
@@ -32,9 +32,12 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var B2key: PianoKey?
     @IBOutlet weak var G2akey: PianoKey?
     
+    //Note count
+    var noteCount : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.noteCount = 0
         self.collectionManager.dataSource = self
         self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
         //Start the engine and the Piano
@@ -77,13 +80,16 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
     
     func addNote()
     {
+        
         tableData?.append("nota")
         self.collectionManager.reloadData()
-    }
-    
-    @IBAction func reload(sender: AnyObject) {
-        tableData?.append("nota")
-        self.collectionManager.reloadData()
+        
+        // var count = tableData?.count
+                //var indexPath = NSIndexPath(index: 1)
+        //NSLog("\(indexPath.length)")
+        //self.collectionManager.reloadItemsAtIndexPaths([indexPath])
+        //self.noteCount++
+        //self.collectionManager.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

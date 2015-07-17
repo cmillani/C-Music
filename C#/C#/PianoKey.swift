@@ -39,12 +39,6 @@ class PianoKey: UIImageView{
         //Highlight da imagem, para dar feedback ao usuario
         self.highlighted = true
         
-        //Atualiza o array
-        
-        self.outerView.tableData?.append("nota")
-        self.outerView.collectionManager.reloadData()
-        
-        
         //Inicializa o timer
         let updateSelector : Selector = "updateTime"
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: updateSelector ,userInfo: nil, repeats: true)
@@ -57,7 +51,8 @@ class PianoKey: UIImageView{
         //Desliga Highlight
         self.highlighted = false
         
-        //IMPLEMENTAR FEEDBACK TO TEMPO PARA O VIEW CONTROLLER
+        //Atualiza o array
+        self.outerView.addNote()
         
         //Reseta o timer
         self.timer.invalidate()

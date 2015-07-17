@@ -318,19 +318,6 @@
                                     <rect key="frame" x="16" y="28" width="768" height="325"/>
                                 </variation>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32N-M4-QTB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="reload">
-                                    <color key="titleColor" red="0.97747300703806761" green="0.98126466152815017" blue="0.94091036026505426" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="485" y="385" width="43" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="reload:" destination="G3Z-Nj-C5S" eventType="touchUpInside" id="bXM-tx-68M"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -360,7 +347,6 @@
                                 <exclude reference="Ra2-rL-g91"/>
                                 <exclude reference="L30-93-dh9"/>
                                 <exclude reference="GRt-sb-W1J"/>
-                                <exclude reference="32N-M4-QTB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -390,7 +376,6 @@
                                 <include reference="Ra2-rL-g91"/>
                                 <include reference="L30-93-dh9"/>
                                 <include reference="GRt-sb-W1J"/>
-                                <include reference="32N-M4-QTB"/>
                             </mask>
                         </variation>
                     </view>
