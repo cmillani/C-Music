@@ -9,7 +9,7 @@
 import UIKit
 
 
-class RecordViewController: UIViewController, UICollectionViewDataSource{
+class RecordViewController: UIViewController, UICollectionViewDataSource, LoadViewControllerDelegate{
     
     //CollectionViewController
     @IBOutlet weak var collectionManager: UICollectionView!
@@ -157,6 +157,27 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
         println("Cell \(indexPath.row) selected")
     }
     
+    @IBAction func save(sender: AnyObject) {
+        
+    }
     
+    @IBAction func load(sender: AnyObject) {
+        performSegueWithIdentifier("defaultLoader", sender: self)
+    }
+    
+    func loadSelectedPartiture(partitura: Partitura)
+    {
+        NSLog("Vai?")
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if (segue.identifier == "defaultLoader")
+        {
+            var destination = segue.destinationViewController as! LoadViewController
+            destination.delegate = self as? LoadViewControllerDelegate;
+        }
+    }
     
 }
