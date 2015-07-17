@@ -113,6 +113,9 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         //Adiciona a nota ao tableData (vetor de notas) e recarrega a view
         tableData?.append(simboloDuracao)
         self.collectionManager.reloadData()
+        var item = collectionView(collectionManager, numberOfItemsInSection: 0) - 1
+        var lastItemIndex = NSIndexPath(forItem: item, inSection: 0)
+        self.collectionManager?.scrollToItemAtIndexPath(lastItemIndex, atScrollPosition: UICollectionViewScrollPosition.Top, animated: false)
         
     }
     
@@ -141,7 +144,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.setupCell(self.tableData![indexPath.item])
+        cell.setupCellwithString(self.tableData![indexPath.item])
         
         if(cell.noteName != "clave_sol"){
         cell.transform = CGAffineTransformMakeScale(0.5, 0.5)

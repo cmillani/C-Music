@@ -13,11 +13,57 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     var noteName : String!
+    var note : Nota?
     
-    func setupCell(note: String){
-        
-        self.image.image=UIImage(named: note)
-        self.noteName = note        
-        
+    func setupCell(simbolo: NSNumber){
+        noteName = numberToString(simbolo)
+        self.image.image=UIImage(named: noteName)
     }
+    
+    func setupCellwithString(simbolo: String){
+        self.image.image=UIImage(named: simbolo)
+    }
+    
+    func numberToString(simbolo: NSNumber) -> String {
+        var name : String
+        switch simbolo
+        {
+            case 0:
+                name = "C2"
+            case 1:
+                name = "C2#"
+            case 2:
+                name = "D2"
+            case 3:
+                name = "D2#"
+            case 4:
+                name = "E2"
+            case 5:
+                name = "F2"
+            case 6:
+                name = "F2#"
+            case 7:
+                name = "G2"
+            case 8:
+                name = "G2#"
+            case 9:
+                name = "A2"
+            case 10:
+                name = "B2"
+            case 11:
+                name = "B2#"
+            case 12:
+                name = "clave_sol"
+            case 13:
+                name = "colcheia"
+            case 14:
+                name = "semiminima"
+            case 15:
+                name = "breve"
+            default:
+                name = "Not found"
+        }
+        return name
+    }
+    
 }
