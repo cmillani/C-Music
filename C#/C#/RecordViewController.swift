@@ -165,9 +165,10 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     }
     
     @IBAction func save(sender: AnyObject) {
-        var ibagem = UIImage(named: "clave_sol");
         var notaArray : NSOrderedSet? = NSOrderedSet(array: notas!)
-//        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: NSNumber(int: 0), ritmo: NSNumber(int: 0), tempos: NSNumber(int: 0), image: UIImagePNGRepresentation(ibagem)!, notas: notaArray)
+        var teste = "Teste".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        var ibagem = UIImage(named: "clave_sol");
+        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: 0, ritmo: 0, tempos: teste!, image: UIImagePNGRepresentation(ibagem), notas: nil)
     }
     
     @IBAction func load(sender: AnyObject) {
@@ -176,6 +177,50 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     
     func loadSelectedPartiture(partitura: Partitura)
     {
+        notas = []
+        for nota in partitura.notas{
+            notas?.append(nota as! Nota)
+            var name : String
+            switch nota.simbolo
+            {
+            case 0:
+                name = "C2"
+            case 1:
+                name = "C2#"
+            case 2:
+                name = "D2"
+            case 3:
+                name = "D2#"
+            case 4:
+                name = "E2"
+            case 5:
+                name = "F2"
+            case 6:
+                name = "F2#"
+            case 7:
+                name = "G2"
+            case 8:
+                name = "G2#"
+            case 9:
+                name = "A2"
+            case 10:
+                name = "B2"
+            case 11:
+                name = "B2#"
+            case 12:
+                name = "clave_sol"
+            case 13:
+                name = "colcheia"
+            case 14:
+                name = "semiminima"
+            case 15:
+                name = "breve"
+            default:
+                name = "Not found"
+            }
+            tableData?.append(name)
+            self.collectionManager.reloadData()
+        }
         NSLog("Vai?")
     }
     
