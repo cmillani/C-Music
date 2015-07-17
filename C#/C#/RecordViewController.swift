@@ -144,7 +144,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.setupCell(self.tableData![indexPath.item])
+        cell.setupCellwithString(self.tableData![indexPath.item])
         
         if(cell.noteName != "clave_sol"){
         cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
