@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate{
-
+    @IBOutlet weak var backrgroundImage: UIImageView!
     @IBOutlet weak var colectionImage: UIImageView!
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var newButton: UIButton!
@@ -26,6 +26,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupScene()
         self.collectionButton.hidden = true
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
         swipeLeft.numberOfTouchesRequired = 1
@@ -256,6 +257,20 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
                 self.newImage.layer.addAnimation(anim3, forKey: "animate position along path")
             })
         }
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        setupScene()
+    }
+    
+    func setupScene(){
+        backrgroundImage.frame.origin = CGPoint.zeroPoint
+        backrgroundImage.frame.size = self.view.frame.size
+        collectionButton.center = self.view.center
+        newButton.center = self.view.center
+        colectionImage.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 35)
+        
+        newImage.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 70)
     }
 }
 

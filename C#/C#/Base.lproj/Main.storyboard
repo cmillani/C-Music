@@ -55,6 +55,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backrgroundImage" destination="oyq-ew-DJe" id="aN7-2e-ojC"/>
                         <outlet property="colectionImage" destination="i2v-6S-YD8" id="wMz-kK-yq0"/>
                         <outlet property="collectionButton" destination="bSb-4e-zcp" id="SeQ-Zj-zK3"/>
                         <outlet property="newButton" destination="dUW-tl-5ft" id="nYp-4x-YGp"/>
