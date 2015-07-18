@@ -15,7 +15,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     @IBOutlet weak var collectionManager: UICollectionView!
 
     //TableData
-    var tableData: [String]? = ["clave_sol","colcheia"]
+    var tableData: [String]? = ["clave_sol"]
     var notas: [Nota]? = []
 
     //Piano keys
@@ -38,7 +38,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.collectionManager.reloadData()
         self.collectionManager.dataSource = self
         self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
         
@@ -165,63 +165,29 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     }
     
     @IBAction func save(sender: AnyObject) {
-        var notaArray : NSOrderedSet? = NSOrderedSet(array: notas!)
         var teste = "Teste".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         var ibagem = UIImage(named: "clave_sol");
-        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: 0, ritmo: 0, tempos: teste!, image: UIImagePNGRepresentation(ibagem), notas: nil)
+        var notaOrderedSet = NSOrderedSet(array: notas!)
+        PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: 0, ritmo: 0, tempos: teste!, image: UIImagePNGRepresentation(ibagem), notas: notaOrderedSet)
     }
     
     @IBAction func load(sender: AnyObject) {
+        self.collectionManager.reloadData()
         performSegueWithIdentifier("defaultLoader", sender: self)
     }
     
     func loadSelectedPartiture(partitura: Partitura)
     {
+        tableData = ["clave_sol"]
         notas = []
-        for nota in partitura.notas{
-            notas?.append(nota as! Nota)
-            var name : String
-            switch nota.simbolo
-            {
-            case 0:
-                name = "C2"
-            case 1:
-                name = "C2#"
-            case 2:
-                name = "D2"
-            case 3:
-                name = "D2#"
-            case 4:
-                name = "E2"
-            case 5:
-                name = "F2"
-            case 6:
-                name = "F2#"
-            case 7:
-                name = "G2"
-            case 8:
-                name = "G2#"
-            case 9:
-                name = "A2"
-            case 10:
-                name = "B2"
-            case 11:
-                name = "B2#"
-            case 12:
-                name = "clave_sol"
-            case 13:
-                name = "colcheia"
-            case 14:
-                name = "semiminima"
-            case 15:
-                name = "breve"
-            default:
-                name = "Not found"
-            }
-            tableData?.append(name)
+        self.collectionManager.reloadData()
+        for nota in partitura.notas.array{
+            println("Nota:\(nota)")
+            println("Simbolo:\(nota.simbolo)")
+            println("Duracao:\(nota.duration)")
+            self.addNote(Int(nota.simbolo), duracao: Float(nota.tempo))
             self.collectionManager.reloadData()
         }
-        NSLog("Vai?")
     }
     
     
@@ -234,4 +200,10 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         }
     }
     
+    @IBAction func new(sender: AnyObject) {
+        tableData = ["clave_sol"]
+        notas = []
+        self.collectionManager.reloadData()
+        
+    }
 }

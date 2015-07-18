@@ -13,5 +13,4 @@ enum PianoSound : Int{
     
     case C2 = 0, Cx2, D2, Dx2, E2, F2, Fx2, G2, Gx2, A2, Ax2, B2
     
-    
 }
