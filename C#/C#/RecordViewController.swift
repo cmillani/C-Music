@@ -7,14 +7,15 @@
 //
 
 import UIKit
-
+var tableData: [String]? = ["clave_sol"]
+var notas: [Nota]? = []
 
 class RecordViewController: UIViewController, UICollectionViewDataSource, LoadViewControllerDelegate{
     
     //CollectionViewController
     @IBOutlet weak var collectionManager: UICollectionView!
 
-    //TableData
+    //Cell data
     var tableData: [String]? = ["clave_sol"]
     var notas: [Nota]? = []
 
@@ -182,9 +183,6 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         notas = []
         self.collectionManager.reloadData()
         for nota in partitura.notas.array{
-            println("Nota:\(nota)")
-            println("Simbolo:\(nota.simbolo)")
-            println("Duracao:\(nota.duration)")
             self.addNote(Int(nota.simbolo), duracao: Float(nota.tempo))
             self.collectionManager.reloadData()
         }
@@ -196,7 +194,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         if (segue.identifier == "defaultLoader")
         {
             var destination = segue.destinationViewController as! LoadViewController
-            destination.delegate = self as? LoadViewControllerDelegate;
+            destination.delegate = self
         }
     }
     

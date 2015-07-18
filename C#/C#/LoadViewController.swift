@@ -58,8 +58,7 @@ extension LoadViewController : UICollectionViewDelegateFlowLayout
         return insets
     }
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        NSLog("Clicou %@", indexPath)
-        
+        //Celula foi clicada        
         var cell = collectionView.cellForItemAtIndexPath(indexPath) as? LoadCell
         if ((delegate) != nil)
         {
