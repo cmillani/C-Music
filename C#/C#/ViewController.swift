@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate{
-
+class ViewController: UIViewController, UIGestureRecognizerDelegate, LoadViewControllerDelegate{
+    @IBOutlet weak var backrgroundImage: UIImageView!
     @IBOutlet weak var colectionImage: UIImageView!
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var newButton: UIButton!
@@ -26,6 +26,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupScene()
         self.collectionButton.hidden = true
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
         swipeLeft.numberOfTouchesRequired = 1
@@ -64,6 +65,30 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         
     }
     
+    @IBAction func OpenExistent(sender: AnyObject) {
+//        var screen = RecordViewController()
+        self.performSegueWithIdentifier("firstLoader", sender: self)
+
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if (segue.identifier == "firstLoader")
+        {
+            var destination = segue.destinationViewController as! LoadViewController
+            destination.delegate = self
+        }
+    }
+    func loadSelectedPartiture(partitura: Partitura)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var newView = storyboard.instantiateViewControllerWithIdentifier("Teste") as! RecordViewController
+        var rootViewController = self.view.window!.rootViewController
+        rootViewController!.presentViewController(newView, animated: false) { () -> Void in
+            newView.loadSelectedPartiture(partitura)
+        }
+        
+    }
     func swipeLeft(recognizer: UISwipeGestureRecognizer)
     {
         if(self.positionControl == 1)
@@ -256,6 +281,20 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
                 self.newImage.layer.addAnimation(anim3, forKey: "animate position along path")
             })
         }
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        setupScene()
+    }
+    
+    func setupScene(){
+        backrgroundImage.frame.origin = CGPoint.zeroPoint
+        backrgroundImage.frame.size = self.view.frame.size
+        collectionButton.center = self.view.center
+        newButton.center = self.view.center
+        colectionImage.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 35)
+        
+        newImage.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 70)
     }
 }
 

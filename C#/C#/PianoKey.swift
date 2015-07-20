@@ -32,7 +32,6 @@ class PianoKey: UIImageView{
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         //Adiciona nota à partitura
-        
         //Comeca a tocar o som da nota
         Piano.sharedInstance.playNote(note)
         
@@ -42,6 +41,7 @@ class PianoKey: UIImageView{
         //Inicializa o timer
         let updateSelector : Selector = "updateTime"
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: updateSelector ,userInfo: nil, repeats: true)
+        
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -64,6 +64,5 @@ class PianoKey: UIImageView{
         //Seta a nota que deve ser tocada
         self.note = note
     }
-    
     
 }
