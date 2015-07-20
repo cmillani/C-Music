@@ -64,7 +64,9 @@ extension LoadViewController : UICollectionViewDelegateFlowLayout
         {
             if (cell?.partiture != nil)
             {
-                delegate?.loadSelectedPartiture(cell!.partiture!)
+                self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    delegate?.loadSelectedPartiture(cell!.partiture!)
+                })
             }
         }
     }

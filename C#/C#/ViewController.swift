@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate{
+class ViewController: UIViewController, UIGestureRecognizerDelegate, LoadViewControllerDelegate{
     @IBOutlet weak var backrgroundImage: UIImageView!
     @IBOutlet weak var colectionImage: UIImageView!
     @IBOutlet weak var newImage: UIImageView!
@@ -65,6 +65,30 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         
     }
     
+    @IBAction func OpenExistent(sender: AnyObject) {
+//        var screen = RecordViewController()
+        self.performSegueWithIdentifier("firstLoader", sender: self)
+
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if (segue.identifier == "firstLoader")
+        {
+            var destination = segue.destinationViewController as! LoadViewController
+            destination.delegate = self
+        }
+    }
+    func loadSelectedPartiture(partitura: Partitura)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var newView = storyboard.instantiateViewControllerWithIdentifier("Teste") as! RecordViewController
+        var rootViewController = self.view.window!.rootViewController
+        rootViewController!.presentViewController(newView, animated: false) { () -> Void in
+            newView.loadSelectedPartiture(partitura)
+        }
+        
+    }
     func swipeLeft(recognizer: UISwipeGestureRecognizer)
     {
         if(self.positionControl == 1)

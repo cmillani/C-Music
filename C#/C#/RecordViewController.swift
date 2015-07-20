@@ -177,6 +177,17 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         performSegueWithIdentifier("defaultLoader", sender: self)
     }
     
+    func startWithPartiture(partitura : Partitura)
+    {
+        tableData = ["clave_sol"]
+        notas = []
+        self.collectionManager.reloadData()
+        for nota in partitura.notas.array{
+            self.addNote(Int(nota.simbolo), duracao: Float(nota.tempo))
+            self.collectionManager.reloadData()
+        }
+    }
+    
     func loadSelectedPartiture(partitura: Partitura)
     {
         tableData = ["clave_sol"]
