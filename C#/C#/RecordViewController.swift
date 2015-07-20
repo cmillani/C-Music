@@ -7,8 +7,8 @@
 //
 
 import UIKit
-var tableData: [String]? = ["clave_sol"]
-var notas: [Nota]? = []
+import Darwin
+
 
 class RecordViewController: UIViewController, UICollectionViewDataSource, LoadViewControllerDelegate{
     
@@ -209,6 +209,21 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         }
     }
     
+    @IBAction func play(sender: AnyObject) {
+        for nota in notas!{
+            Piano.sharedInstance.playNote(Int(nota.simbolo))
+            
+            //Highlight da imagem, para dar feedback ao usuario
+           // self.highlighted = true
+            
+            //Inicializa o timer
+            sleep(UInt32(Int(nota.tempo)+1))
+        Piano.sharedInstance.stopPlayingNote(Int(nota.simbolo))
+
+            
+        }
+        
+    }
     @IBAction func new(sender: AnyObject) {
         tableData = ["clave_sol"]
         notas = []
