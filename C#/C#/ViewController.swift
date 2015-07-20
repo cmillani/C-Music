@@ -250,7 +250,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, LoadViewCon
                 self.newImage.center = CGPoint(x: 283, y: 905)
                 self.newImage.layer.addAnimation(anim3, forKey: "animate position along path")
                 }, completion: { (res) -> Void in
-                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    UIView.animateWithDuration(0.7, animations: { () -> Void in
                         
                         self.colectionImage.transform = CGAffineTransformMakeScale(1, 1)
                         let anim2 = CAKeyframeAnimation(keyPath: "position")
