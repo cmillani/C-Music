@@ -38,28 +38,28 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         self.view.addGestureRecognizer(swipeRight)
         self.view.addGestureRecognizer(swipeLeft)
         
-        self.path1.moveToPoint(CGPoint(x: 360, y: 870))
+//        self.path1.moveToPoint(CGPoint(x: 360, y: 870))
         self.path1.addCurveToPoint(CGPoint(x: 235, y: 845), controlPoint1: CGPoint(x: 320, y: 865), controlPoint2: CGPoint(x: 270, y: 855))
         
-        self.path2.moveToPoint(CGPoint(x: 235, y: 845))
+//        self.path2.moveToPoint(CGPoint(x: 235, y: 845))
         self.path2.addCurveToPoint(CGPoint(x: 380, y: 820), controlPoint1: CGPoint(x: 270, y: 825), controlPoint2: CGPoint(x: 320, y: 835))
         
-        self.path3.moveToPoint(CGPoint(x: 380, y: 820))
+//        self.path3.moveToPoint(CGPoint(x: 380, y: 820))
         self.path3.addCurveToPoint(CGPoint(x: 485, y: 845), controlPoint1: CGPoint(x: 410, y: 825), controlPoint2: CGPoint(x: 440, y: 835))
         
-        self.path4.moveToPoint(CGPoint(x: 485, y: 845))
+//        self.path4.moveToPoint(CGPoint(x: 485, y: 845))
         self.path4.addCurveToPoint(CGPoint(x: 360, y: 870), controlPoint1: CGPoint(x: 400, y: 850), controlPoint2: CGPoint(x: 440, y: 860))
         
-        self.path5.moveToPoint(CGPoint(x: 360, y: 870))
+//        self.path5.moveToPoint(CGPoint(x: 360, y: 870))
         self.path5.addCurveToPoint(CGPoint(x: 485, y: 845), controlPoint1: CGPoint(x: 400, y: 860), controlPoint2: CGPoint(x: 440, y: 850))
         
-        self.path6.moveToPoint(CGPoint(x: 485, y: 845))
+//        self.path6.moveToPoint(CGPoint(x: 485, y: 845))
         self.path6.addCurveToPoint(CGPoint(x: 380, y: 820), controlPoint1: CGPoint(x: 410, y: 835), controlPoint2: CGPoint(x: 440, y: 825))
         
-        self.path7.moveToPoint(CGPoint(x: 380, y: 820))
+//        self.path7.moveToPoint(CGPoint(x: 380, y: 820))
         self.path7.addCurveToPoint(CGPoint(x: 235, y: 845), controlPoint1: CGPoint(x: 340, y: 825), controlPoint2: CGPoint(x: 300, y: 830))
         
-        self.path8.moveToPoint(CGPoint(x: 235, y: 845))
+//        self.path8.moveToPoint(CGPoint(x: 235, y: 845))
         self.path8.addCurveToPoint(CGPoint(x: 360, y: 870), controlPoint1: CGPoint(x: 270, y: 855), controlPoint2: CGPoint(x: 325, y: 862))
         
     }

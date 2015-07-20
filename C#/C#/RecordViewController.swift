@@ -168,8 +168,13 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
     @IBAction func save(sender: AnyObject) {
         var teste = "Teste".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         var ibagem = UIImage(named: "clave_sol");
+//<<<<<<< Updated upstream
         var notaOrderedSet = NSOrderedSet(array: notas!)
         PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: 0, ritmo: 0, tempos: teste!, image: UIImagePNGRepresentation(ibagem), notas: notaOrderedSet)
+//=======
+        var notaArray : NSOrderedSet? = NSOrderedSet(array: notas!)
+        //PartituraServices.criarPartitura("Myself", nome: "A Partitura", qtdCompassos: NSNumber(int: 0), ritmo: NSNumber(int: 0), tempos: NSNumber(int: 0), image: UIImagePNGRepresentation(ibagem)!, notas: notaArray)
+//>>>>>>> Stashed changes
     }
     
     @IBAction func load(sender: AnyObject) {
