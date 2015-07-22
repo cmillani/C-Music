@@ -14,14 +14,20 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     var noteName : String!
     var note : Nota?
+    var notes : [Nota]?
+    //Posicoes:
     
     func setupCell(simbolo: NSNumber){
         noteName = numberToString(simbolo)
-        self.image.image=UIImage(named: noteName)
+        self.setupCellwithString(noteName)
+        
     }
     
     func setupCellwithString(simbolo: String){
-        self.image.image=UIImage(named: simbolo)
+        var novanota = UIImage(named: simbolo)
+        self.image.addSubview(UIImageView(image: novanota))
+        self.image.image=UIImage(named: "pauta")
+//        self.image.
     }
     
     func numberToString(simbolo: NSNumber) -> String {

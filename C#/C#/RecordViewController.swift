@@ -10,7 +10,7 @@ import UIKit
 import Darwin
 
 
-class RecordViewController: UIViewController, UICollectionViewDataSource, LoadViewControllerDelegate{
+class RecordViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LoadViewControllerDelegate{
     
     //CollectionViewController
     @IBOutlet weak var collectionManager: UICollectionView!
@@ -41,13 +41,31 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, LoadVi
         
         self.collectionManager.reloadData()
         self.collectionManager.dataSource = self
-        self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
+        self.collectionManager.delegate = self
+//        self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
         
         //Start the engine and the Piano
         PianoAudioController.sharedInstance.startEngine()
         setKeys()
         
     }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return insets
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        
+        return CGFloat(-27)
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return CGFloat(-75)
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let size = CGSize(width: 51, height: 150)
+        return size
+    }
+    
     
     func setKeys()
     {
