@@ -16,7 +16,10 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionManager: UICollectionView!
 
     //Cell data
-    var tableData: [String]? = ["clave_sol"]
+    var tableData: [String]? = []
+    
+    var cellArray: [CollectionViewCell] = []
+    
     var notas: [Nota]? = []
 
     //Piano keys
@@ -167,10 +170,14 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.setupCellwithString(self.tableData![indexPath.item])
+        if (indexPath.item == cellArray.count)
+        {
+            NSLog("\(tableData)")
+            cell.setupCellwithString(self.tableData![indexPath.item])
+            cellArray.append(cell)
+        }
         
         if(cell.noteName != "clave_sol"){
         cell.transform = CGAffineTransformMakeScale(0.5, 0.5)

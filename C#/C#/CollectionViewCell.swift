@@ -25,9 +25,45 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupCellwithString(simbolo: String){
         var novanota = UIImage(named: simbolo)
-        self.image.addSubview(UIImageView(image: novanota))
         self.image.image=UIImage(named: "pauta")
+        self.addSubview(UIImageView(image: novanota))
 //        self.image.
+    }
+    
+    func positionInCelWithNumber(nota: NSNumber) -> CGPoint
+    { //8
+        let shift : CGFloat = 10
+        var point : CGPoint = CGPoint(x: 0, y: -(8 * shift))
+        switch nota
+        {
+        case 0:
+            point = CGPoint(x: point.x, y: point.y + shift)
+        case 1:
+            point = CGPoint(x: point.x, y: point.y + 2 * shift)
+        case 2:
+            point = CGPoint(x: point.x, y: point.y + 3 * shift)
+        case 3:
+            point = CGPoint(x: point.x, y: point.y + 4 * shift)
+        case 4:
+            point = CGPoint(x: point.x, y: point.y + 5 * shift)
+        case 5:
+            point = CGPoint(x: point.x, y: point.y + 6 * shift)
+        case 6:
+            point = CGPoint(x: point.x, y: point.y + 7 * shift)
+        case 7:
+            point = CGPoint(x: point.x, y: point.y + 8 * shift)
+        case 8:
+            point = CGPoint(x: point.x, y: point.y + 9 * shift)
+        case 9:
+            point = CGPoint(x: point.x, y: point.y + 10 * shift)
+        case 10:
+            point = CGPoint(x: point.x, y: point.y + 11 * shift)
+        case 11:
+            point = CGPoint(x: point.x, y: point.y + 12 * shift)
+        default:
+            point = CGPoint(x: 0, y: 0)
+        }
+        return point
     }
     
     func numberToString(simbolo: NSNumber) -> String {
