@@ -92,7 +92,6 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="Wm3-AV-LkT" customClass="CollectionViewCell" customModule="C_" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="51" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k22-6f-8Vb">
@@ -101,7 +100,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.99769176140000004" green="0.034878453859999999" blue="0.31900735320000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="51" height="150"/>
                                         <connections>
                                             <outlet property="image" destination="k22-6f-8Vb" id="U0g-ar-qHr"/>
