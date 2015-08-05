@@ -112,7 +112,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         var note:Nota = Nota()
         note.simbolo = nota
         note.som = nota
-        note.tempo = duracao
+        note.tempo = duracao*1000 //Saves time in milliseconds (duracao is in seconds)
         notas!.append(note)
         
         //A duracao nos da qual nota escolher
@@ -170,15 +170,9 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
-        
-        if (indexPath.item == cellArray.count)
-        {
-            NSLog("\(tableData)")
-            cell.setupCellwithString(self.tableData![indexPath.item])
-            cellArray.append(cell)
-        }
-        
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        NSLog("\(tableData)")
+        cell.setupCellwithString(self.tableData![indexPath.item])
         if(cell.noteName != "clave_sol"){
         cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
         }
@@ -244,12 +238,11 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
             Piano.sharedInstance.playNote(Int(nota.simbolo))
             
             //Highlight da imagem, para dar feedback ao usuario
-           // self.highlighted = true
-            
-            //Inicializa o timer
-            sleep(UInt32(Int(nota.tempo)+1))
-        Piano.sharedInstance.stopPlayingNote(Int(nota.simbolo))
 
+            //Inicializa o timer
+            usleep(useconds_t(nota.tempo.floatValue * 1000)) //As tempo is in milliseconds and usleep receives microsecs, we multiply it by 1000
+            Piano.sharedInstance.stopPlayingNote(Int(nota.simbolo))
+            NSLog("\(nota.tempo)")
             
         }
         

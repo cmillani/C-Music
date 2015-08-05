@@ -14,7 +14,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     var noteName : String!
     var note : Nota?
-    var notes : [Nota]?
+    var notes : [UIImageView]?
     //Posicoes:
     
     func setupCell(simbolo: NSNumber){
@@ -24,6 +24,13 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func setupCellwithString(simbolo: String){
+        if ((notes) != nil)
+        {
+            for note in notes!
+            {
+                note.removeFromSuperview()
+            }
+        }
         var novanota = UIImage(named: simbolo)
         self.image.image=UIImage(named: "pauta")
         self.addSubview(UIImageView(image: novanota))
