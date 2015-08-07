@@ -162,7 +162,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let qtty = tableData?.count
+        if let qtty = notas?.count
         {
             return qtty
         }
