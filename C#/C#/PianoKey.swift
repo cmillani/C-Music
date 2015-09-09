@@ -20,6 +20,8 @@ class PianoKey: UIImageView{
     var timer : NSTimer!
     
     
+    var timeBefore : NSTimeInterval = 0
+    
     //View que esta contida
     var outerView : RecordViewController!
     
@@ -38,9 +40,11 @@ class PianoKey: UIImageView{
         //Highlight da imagem, para dar feedback ao usuario
         self.highlighted = true
         
+        timeBefore = NSDate().timeIntervalSince1970 //Get press time
+        
         //Inicializa o timer
         let updateSelector : Selector = "updateTime"
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: updateSelector ,userInfo: nil, repeats: true)
+        //self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: updateSelector ,userInfo: nil, repeats: true)
         
     }
     
@@ -51,11 +55,13 @@ class PianoKey: UIImageView{
         //Desliga Highlight
         self.highlighted = false
         
+        var timeDelta = NSDate().timeIntervalSince1970 - timeBefore //By doing this we get the time the button was pressed
+        
         //Atualiza o array
-        self.outerView.addNote(note, duracao: timeTouched)
+        self.outerView.addNote(note, duracao: Float(timeDelta))
         
         //Reseta o timer
-        self.timer.invalidate()
+        //self.timer.invalidate()
         timeTouched = 0
     }
     

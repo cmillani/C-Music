@@ -171,7 +171,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func addNote(nota : Int, duracao: Float)
     {
-        
+//        NSLog("\(nota)")
         //Com base no tempo que o usuario apertou a nota, selecionamos a imagem que sera adicionada na partitura
         var simboloDuracao: String
         
@@ -179,7 +179,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         var note:Nota = Nota()
         note.simbolo = nota
         note.som = nota
-        note.tempo = duracao
+        note.tempo = duracao*1000 //Saves time in milliseconds (duracao is in seconds)
         notas!.append(note)
         
         //A duracao nos da qual nota escolher
@@ -187,21 +187,25 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         //TO DO: Implementar conjuncao com a classe Nota, para que fique mais simples
         if(duracao <= 0.5)
         {
+            note.simbolo = 13
             simboloDuracao = "colcheia"
         }
         else{
             if(duracao <= 1.5)
             {
-            simboloDuracao = "seminima"
+                note.simbolo = 14
+                simboloDuracao = "seminima"
             }
             else{
                 if(duracao <= 2.5)
                 {
-                simboloDuracao = "semibreve"
+                    note.simbolo = 15
+                    simboloDuracao = "semibreve"
                 }
                 else
                 {
-                simboloDuracao = "breve"
+                    note.simbolo = 15
+                    simboloDuracao = "breve"
                 }
             }
         }
@@ -246,7 +250,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let qtty = tableData?.count
+        if let qtty = notas?.count
         {
             return qtty
         }
@@ -258,18 +262,13 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
-        
-        if (indexPath.item == cellArray.count)
-        {
-            NSLog("\(tableData)")
-            cell.setupCellwithString(self.tableData![indexPath.item])
-            cellArray.append(cell)
-        }
-        
-        if(cell.noteName != "clave_sol"){
-        cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
-        }
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+//        NSLog("\(tableData)")
+//        cell.setupCellwithString(self.tableData![indexPath.item])
+        cell.setupCellWithNote(notas![indexPath.item])
+//        if(cell.noteName != "clave_sol"){
+//        cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+//        }
         
         return cell
     }
@@ -301,7 +300,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         notas = []
         self.collectionManager.reloadData()
         for nota in partitura.notas.array{
-            self.addNote(Int(nota.simbolo), duracao: Float(nota.tempo))
+            self.addNote(Int(nota.som), duracao: Float(nota.tempo))
             self.collectionManager.reloadData()
         }
     }
@@ -312,7 +311,7 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         notas = []
         self.collectionManager.reloadData()
         for nota in partitura.notas.array{
-            self.addNote(Int(nota.simbolo), duracao: Float(nota.tempo))
+            self.addNote(Int(nota.som), duracao: Float(nota.tempo))
             self.collectionManager.reloadData()
         }
     }
@@ -329,15 +328,14 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func play(sender: AnyObject) {
         for nota in notas!{
-            Piano.sharedInstance.playNote(Int(nota.simbolo))
+            Piano.sharedInstance.playNote(Int(nota.som))
             
             //Highlight da imagem, para dar feedback ao usuario
-           // self.highlighted = true
-            
-            //Inicializa o timer
-            sleep(UInt32(Int(nota.tempo)+1))
-        Piano.sharedInstance.stopPlayingNote(Int(nota.simbolo))
 
+            //Inicializa o timer
+            usleep(useconds_t(nota.tempo.floatValue * 1000)) //As tempo is in milliseconds and usleep receives microsecs, we multiply it by 1000
+            Piano.sharedInstance.stopPlayingNote(Int(nota.som))
+            NSLog("\(nota.tempo)")
             
         }
         

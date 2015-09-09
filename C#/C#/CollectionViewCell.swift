@@ -12,15 +12,33 @@ class CollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var image: UIImageView!
-    var noteName : String!
-    var note : Nota?
-    var notes : [Nota]?
+    var notes : [UIImageView] = []
     //Posicoes:
     
     func setupCell(simbolo: NSNumber){
-        noteName = numberToString(simbolo)
+        var noteName = numberToString(simbolo)
         self.setupCellwithString(noteName)
         
+    }
+    
+    func setupCellWithNote(newNote: Nota)
+    {
+        self.prepareForReuse()
+        var novanota = UIImage(named: numberToString(newNote.simbolo))
+        var novaimagem = UIImageView(image: novanota)
+//        novaimagem.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        novaimagem.center = positionInCelWithNumber(newNote.som)
+        self.image.image=UIImage(named: "pauta")
+        self.addSubview(novaimagem)
+        notes.append(novaimagem)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        for note in notes
+        {
+            note.removeFromSuperview()
+        }
     }
     
     func setupCellwithString(simbolo: String){
@@ -32,7 +50,7 @@ class CollectionViewCell: UICollectionViewCell {
     func positionInCelWithNumber(nota: NSNumber) -> CGPoint
     { //8
         let shift : CGFloat = 10
-        var point : CGPoint = CGPoint(x: 0, y: -(8 * shift))
+        var point : CGPoint = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2-(8 * shift))
         switch nota
         {
         case 0:
