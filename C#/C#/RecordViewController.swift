@@ -21,8 +21,29 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     var cellArray: [CollectionViewCell] = []
     
     var notas: [Nota]? = []
-
-    //Piano keys
+    
+    //Beat Timer
+    var beatTimer : NSTimer! //By default we are going to use a 0.25 second beat
+    
+    //Beat Interval
+    var beatInterval : Float = 0.25
+    
+    //Number of beats by compass
+    var numberOfBeats : Int = 4 //For testing purposes we are going to use 4
+    
+    //Current Beat
+    var currentBeat: Int = 0 //Going to be incremented by 1 each 0.25 seconds
+    
+    //Note to be added to compass array
+    var notesToBeAdded : [[Nota?]] = [[]]
+    
+    //Notes to be drawn on the sheet
+    var notesToBeDrawn : [[Nota?]] = [[]]
+    
+    //We will use a cursor (CGPoint) to know where we are drawing
+    var sheetCursor : CGPoint = CGPoint(x: 15, y: 15) //Need to check the values by default
+    
+    //Piano keys outlets
     @IBOutlet weak var C2key: PianoKey?
     @IBOutlet weak var C2akey: PianoKey?
     @IBOutlet weak var D2key: PianoKey?
@@ -39,36 +60,82 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
     //Note count
     var noteCount : Int = 0
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.collectionManager.reloadData()
         self.collectionManager.dataSource = self
         self.collectionManager.delegate = self
-//        self.collectionManager.backgroundColor = UIColor(patternImage: UIImage(named: "sheet")!)
         
         //Start the engine and the Piano
         PianoAudioController.sharedInstance.startEngine()
         setKeys()
         
+        //Teste
+        self.drawCompass()
+        self.drawCompass()
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        return insets
-    }
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    
+    func updateBeat()
+    {
+        //First of all, we update the beat count to make it easier to know where we are
+        if(self.currentBeat < 3){
+            self.currentBeat++;
+        }else
+        {
+            self.currentBeat = 0
+        }
         
-        return CGFloat(-27)
-    }
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return CGFloat(-75)
-    }
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let size = CGSize(width: 51, height: 150)
-        return size
+        //Now we need to check which notes we should add by checking the notesToBeAdded array
+        
+        //Then we need to create a cell with theses notes
+        if(self.notesToBeAdded[self.currentBeat].isEmpty)
+        {
+        //If the array is empty, we need to put an pause symbol, however if the previous
+        //beat already had a pause, we should change their symbol instead
+            if(self.currentBeat > 0)
+            {
+                //Check previous beat
+            }else
+            {
+             //Add simple pause
+             //   self.notesToBeDrawn
+            }
+            
+        }else
+        {
+        //If it is just notes, we just add them to the notesToBeDrawn array
+            for(var i = 0; i <  (self.notesToBeAdded[self.currentBeat].count); i++)
+            {
+                self.notesToBeDrawn[self.currentBeat].append(self.notesToBeAdded[self.currentBeat][i])
+            }
+            
+        }
+        
+        //We check if we are on the last beat
+        if(self.currentBeat == self.numberOfBeats)
+        {
+            //We can now draw the compass on our view
+            drawCompass()
+        }
+        
     }
     
+    func drawCompass()
+    {
+        //Let us send to our drawing class
+        var compass = Drawer.sharedInstance.drawCompass(self.sheetCursor)
+        self.view.addSubview(compass)
+        self.sheetCursor.x += compass.frame.width
+        
+        
+        //The last thing we do is to clean the notesToBeDrawn array
+        self.notesToBeDrawn.removeAll(keepCapacity: false)
+        self.notesToBeAdded.removeAll(keepCapacity: false)
+    }
     
     func setKeys()
     {
@@ -140,18 +207,39 @@ class RecordViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
 
         //Adiciona a nota ao tableData (vetor de notas) e recarrega a view
+       /*
         tableData?.append(simboloDuracao)
         self.collectionManager.reloadData()
         var item = collectionView(collectionManager, numberOfItemsInSection: 0) - 1
         var lastItemIndex = NSIndexPath(forItem: item, inSection: 0)
         self.collectionManager?.scrollToItemAtIndexPath(lastItemIndex, atScrollPosition: UICollectionViewScrollPosition.Top, animated: false)
-        
+        */
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+//pragma Collection View Functions
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return insets
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        
+        return CGFloat(-27)
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return CGFloat(-75)
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let size = CGSize(width: 51, height: 150)
+        return size
+    }
+
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1

@@ -27,7 +27,6 @@ class CollectionViewCell: UICollectionViewCell {
         var novanota = UIImage(named: simbolo)
         self.image.image=UIImage(named: "pauta")
         self.addSubview(UIImageView(image: novanota))
-//        self.image.
     }
     
     func positionInCelWithNumber(nota: NSNumber) -> CGPoint
